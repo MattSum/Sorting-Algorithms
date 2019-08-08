@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Quick sort algorithm implemented in Python3
+Reference: https://en.wikipedia.org/wiki/Quicksort
 """
 
 
