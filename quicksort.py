@@ -11,7 +11,7 @@ def quick_sort(data: list, beg: int, end: int) -> list:
         quick_sort(data, p+1, end)
 
 
-def partition(data: list, beg: int, end: int) -> list:
+def partition(data: list, beg: int, end: int) -> int:
     pivot = data[end]
     i = beg
     for j in range(beg, end):
