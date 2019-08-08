@@ -4,7 +4,7 @@ Quick sort algorithm implemented in Python3
 """
 
 
-def quick_sort(data: list, beg: int, end: int) -> list:
+def quick_sort(data: list, beg: int, end: int) -> None:
     if beg < end:
         p = partition(data, beg, end)
         quick_sort(data, beg, p-1)
