@@ -32,7 +32,7 @@ def bidirectional_selection_sort(A: list) -> None:
         if minimal != i:
             A[i], A[minimal] = A[minimal], A[i]
 
-        for j in range(maximal, i, -1):
+        for j in range(k, i, -1):
             if A[j] > A[maximal]:
                 maximal = j
 
@@ -47,7 +47,7 @@ def bidirectional_selection_sort(A: list) -> None:
 
 
 if __name__ == "__main__":
-    arr = [51, 23, 56, 19, 4]
+    arr = [51, 23, 0, 1, 56, 19, 4]
     print(arr)
     bidirectional_selection_sort(arr)
     print(arr)
