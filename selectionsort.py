@@ -21,7 +21,29 @@ def selection_sort(A: list) -> None:
 
 def bidirectional_selection_sort(A: list) -> None:
     """Known as Coctail sort"""
-    pass
+    k = len(A)-1
+    for i in range(len(A)):
+        minimal = i
+        maximal = k
+        for j in range(i+1, k+1):
+            if A[j] < A[minimal]:
+                minimal = j
+
+        if minimal != i:
+            A[i], A[minimal] = A[minimal], A[i]
+
+        for j in range(maximal, i, -1):
+            if A[j] > A[maximal]:
+                maximal = j
+
+        if maximal != k+1-i:
+            A[k], A[maximal] = A[maximal], A[k]
+
+        k -= 1
+        if k < len(A) / 2:
+            break
+
+    return None
 
 
 if __name__ == "__main__":
