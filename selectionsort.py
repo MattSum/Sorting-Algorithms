@@ -16,11 +16,16 @@ def selection_sort(A: list) -> None:
         if minimal != i:
             A[i], A[minimal] = A[minimal], A[i]
     
-        return None
+    return None
+
+
+def bidirectional_selection_sort(A: list) -> None:
+    """Known as Coctail sort"""
+    pass
 
 
 if __name__ == "__main__":
     arr = [51, 23, 56, 19, 4]
     print(arr)
-    selection_sort(arr)
+    bidirectional_selection_sort(arr)
     print(arr)
