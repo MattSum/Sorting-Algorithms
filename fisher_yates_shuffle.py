@@ -13,11 +13,10 @@ def fisher_yates_shuffle(A: list) -> None:
             A[j], A[i] = A[i], A[j]
             yield A
 
-
-def draw(save=False):
+def draw():
       plt.style.use('dark_background')
       fig, ax = plt.subplots()
-      scatter_points = ax.bar(A, range(len(A)))
+      bars = ax.bar(A, range(len(A)))
       text = ax.text(0.02, 0.95, "", transform=ax.transAxes)
 
 
@@ -31,7 +30,7 @@ def draw(save=False):
 
       ani = FuncAnimation(fig, 
                           func=update, 
-                          fargs=(scatter_points, iteration), 
+                          fargs=(bars, iteration), 
                           frames=fisher_yates_shuffle(A), 
                           interval=3,
                           repeat=False)
