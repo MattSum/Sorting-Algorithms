@@ -19,14 +19,12 @@ def draw():
       bars = ax.bar(A, range(len(A)))
       text = ax.text(0.02, 0.95, "", transform=ax.transAxes)
 
-
       iteration = [0]
       def update(A, points, iteration):
             for points, val in zip(points, A):
                   points.set_height(val)
             iteration[0] += 1
             text.set_text(f"Number of operations: {iteration[0]}")
-
 
       ani = FuncAnimation(fig, 
                           func=update, 
